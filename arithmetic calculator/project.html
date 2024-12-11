@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Arithmetic Calculations</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="project.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Learn Arithmetic Calculations</h1>
+    </header>
+
+    <main>
+        <!-- Settings Section -->
+        <section id="settings">
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <label for="numQuestions">Number of Questions:</label>
+                <input type="number" id="numQuestions" name="numQuestions" min="1" max="50" required>
+
+                <label for="range">Number Range:</label>
+                <input type="number" id="range" name="range" min="1" max="100" required>
+
+                <fieldset>
+                    <legend>Arithmetic Operations:</legend>
+                    <label>
+                        <input type="checkbox" name="operation" value="add" checked> Addition
+                    </label>
+                    <label>
+                        <input type="checkbox" name="operation" value="subtract" checked> Subtraction
+                    </label>
+                    <label>
+                        <input type="checkbox" name="operation" value="multiply" checked> Multiplication
+                    </label>
+                    <label>
+                        <input type="checkbox" name="operation" value="divide" checked> Division
+                    </label>
+                    <label>
+                        <input type="checkbox" name="operation" value="Algebra" checked> Algebra
+                    </label>
+                    <label>
+                        <input type="checkbox" name="operation" value="wordProblem" checked>
+                    </label>
+                </fieldset>
+
+                
+
+                <label for="timer">Timer (seconds per question):</label>
+                <input type="number" id="timer" name="timer" min="5" placeholder="Optional">
+
+                <button type="submit">Start Quiz</button>
+            </form>
+        </section>
+
+        <!-- Questionnaire Section -->
+        <section id="quiz-container" class="hidden">
+            <h2>Questionnaire</h2>
+            <div id="question-box">
+                <p id="question-number">Question: 1</p>
+                <p id="question"></p>
+                <label for="answer">Your Answer:</label>
+                <input type="number" id="answer" name="answer" required>
+                <button id="next-question">Next Question</button>
+                <p id="timer-display"></p>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section id="results" class="hidden">
+            <h2>Results</h2>
+            <div id="score"></div>
+            <button id="view-answers">View Answers</button>
+            <ul id="correct-answers" class="hidden"></ul>
+            <canvas id="result-graph" width="400" height="400"></canvas>
+            <p id="time-taken"></p>
+            <button id="restart">Restart</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Learn Arithmetic Calculations</p>
+    </footer>
+</body>
+</html>
+
